@@ -1,51 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 15:50:36 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 16:00:17 by iboukhss         ###   ########.fr       */
+/*   Created: 2023/11/29 19:29:21 by iboukhss          #+#    #+#             */
+/*   Updated: 2023/11/29 19:29:25 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	char	*tmp;
+#include <stdio.h>
 
-	tmp = dest;
-	while (*src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (i < n)
 	{
 		*dest = *src;
 		++src;
 		++dest;
+		++i;
 	}
-	*dest = '\0';
-	return (tmp);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
-	char	*hello = "hello world";
-	char	copyhere[16];
-	char	*retptr;
-	int	x, y = 0;
+	char	*new = "this is a string";
+	char	destination[17];
+	int	i = 0;
 
-	printf("%s %p\n", hello, hello);
+	printf("origin: %s\n", destination);
 
-	for (x = 0; x < 16; ++x)
-		printf("%c", *(copyhere + x));
-	printf(" %p\n", copyhere);
+	printf("memory: ");
+	for (i = 0; i < 17; ++i)
+	{
+		printf("%c", *(destination+i));
+	}
+	printf("\n");
 
-	retptr = ft_strcpy(copyhere, hello);
+	ft_strncpy(destination, new, 6);
 
-	for (y = 0; y < 16; ++y)
-		printf("%c", *(retptr+y));
-	printf(" %p\n", retptr);
+	printf("result: %s", destination);
 }
-*/
