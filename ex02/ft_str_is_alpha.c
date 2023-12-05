@@ -6,7 +6,7 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:44:00 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 16:20:10 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:02:18 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_str_is_alpha(char *str)
 
 int	main(void)
 {
-	char	*bla = "jfdalskjfadlJLKjldas";
+	char	*bla = "";
 	int	alp = 10;
 
 	alp = ft_str_is_alpha(bla);

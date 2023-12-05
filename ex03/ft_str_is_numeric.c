@@ -6,7 +6,7 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:02:47 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 16:21:04 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:04:05 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ int	ft_str_is_numeric(char *str)
 
 int	main(void)
 {
-	char	*bla = "1243dfas453";
+	char	*bla = "";
 	int	alp = 10;
 
 	alp = ft_str_is_numeric(bla);
 
-	printf("string: %s\nalpha?: %d\n", bla, alp);
+	printf("string: %s\nnumer?: %d\n", bla, alp);
 }
 */
