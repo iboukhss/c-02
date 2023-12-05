@@ -6,11 +6,9 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:29:21 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/11/29 19:29:25 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:58:14 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -26,6 +24,8 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 }
 
+#include <stdio.h>
+
 int	main(void)
 {
 	char	*new = "this is a string";
@@ -36,9 +36,7 @@ int	main(void)
 
 	printf("memory: ");
 	for (i = 0; i < 17; ++i)
-	{
 		printf("%c", *(destination+i));
-	}
 	printf("\n");
 
 	ft_strncpy(destination, new, 6);

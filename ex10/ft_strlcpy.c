@@ -6,7 +6,7 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:43:26 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 17:04:39 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/04 18:09:19 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,22 +47,28 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 int	main(void)
 {
 	char	*mystring = "hello";
-	char	destination[10] = "hallo";
+	char	destination[10] = "";
 	unsigned int	give;
 
 	char	*mystring2 = "hello";
-	char	destination2[10] = "hallo";
+	char	destination2[10] = "a";
 	unsigned int	give2;
 
-	printf("string: %s\n", mystring);
-	printf("string? %s\n\n", destination);
+	unsigned int	size = 8;
 
-	give = strlcpy(destination, mystring, 5);
+	printf("string: %s\n", mystring);
+
+	printf("memory: ");
+	for (int x = 0; x < size; ++x)
+		printf("%c", *(destination + x));
+	printf("\n");
+
+	give = strlcpy(destination, mystring, size);
 
 	printf("string! %s\n", destination);
 	printf("strlcp: %u\n\n", give);
 
-	give2 = ft_strlcpy(destination2, mystring2, 5);
+	give2 = ft_strlcpy(destination2, mystring2, size);
 
 	printf("ftstrl: %s\n", destination2);
 	printf("ftstrl: %u\n", give2);
