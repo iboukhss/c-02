@@ -6,14 +6,15 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 00:36:10 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 16:28:46 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:03:35 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_uppercase(char *str)
 {
-	int	upcase = 1;
+	int	upcase;
 
+	upcase = 1;
 	while (*str && upcase == 1)
 	{
 		if (*str >= 'A' && *str <= 'Z')

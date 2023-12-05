@@ -6,12 +6,11 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:45:06 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/05 14:47:42 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:01:23 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -20,16 +19,16 @@ void	ft_putchar(char c)
 
 void	ft_puthex(char n)
 {
-	char	*base;
+	char	*base16;
 	int		q;
 	int		r;
 
-	base = "0123456789abcdef";
+	base16 = "0123456789abcdef";
 	q = n / 16;
 	r = n % 16;
 	write(1, "\\", 1);
-	write(1, &base[q], 1);
-	write(1, &base[r], 1);
+	write(1, &base16[q], 1);
+	write(1, &base16[r], 1);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -44,10 +43,14 @@ void	ft_putstr_non_printable(char *str)
 	}
 }
 
+/*
+#include <stdio.h>
+
 int	main(void)
 {
-	char	*test = "Coucou\ntu vas bien ?";
+	char	*test = "Coucou\ntu\tvas bien\n?\v";
 
 	ft_putstr_non_printable(test);
 	return (0);
 }
+*/

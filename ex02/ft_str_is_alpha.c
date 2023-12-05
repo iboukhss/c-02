@@ -6,14 +6,15 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:44:00 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/05 18:02:18 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:02:30 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_alpha(char *str)
 {
-	int	alpha = 1;
+	int	alpha;
 
+	alpha = 1;
 	while (*str && alpha == 1)
 	{
 		if ((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z'))

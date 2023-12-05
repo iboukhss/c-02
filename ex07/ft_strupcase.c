@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 18:11:20 by iboukhss          #+#    #+#             */
+/*   Updated: 2023/12/05 18:11:25 by iboukhss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char	*ft_strupcase(char *str)
 {
 	char	*tmp;
@@ -17,8 +29,9 @@ char	*ft_strupcase(char *str)
 
 int	main(void)
 {
-	char	hello[] = "this is a string";
+	char	hello[] = "tEstT String";
 	char	*hi;
+
 	printf("nocase: %s\n", hello);
 	hi = ft_strupcase(hello);
 	printf("upcase: %s\n", hi);

@@ -6,7 +6,7 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:43:26 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 18:09:19 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:54:14 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ unsigned int	ft_strlen(char *str)
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	len;
+	unsigned int	tmp;
 	unsigned int	i;
 
-	len = ft_strlen(src);
+	tmp = ft_strlen(src);
 	i = 0;
 	while (i < size - 1)
 	{
@@ -37,39 +37,33 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		++i;
 	}
 	dest[i] = '\0';
-
-	return (len);
+	return (tmp);
 }
 
+/* Compile with -lbsd */
+/*
 #include <stdio.h>
 #include <bsd/string.h>
 
 int	main(void)
 {
-	char	*mystring = "hello";
-	char	destination[10] = "";
-	unsigned int	give;
+	char	*str = "helloworld";
+	char	here[8] = "";
+	char	here2[8] = "";
 
-	char	*mystring2 = "hello";
-	char	destination2[10] = "a";
-	unsigned int	give2;
+	unsigned int	ret;
+	unsigned int	ret2;
 
 	unsigned int	size = 8;
 
-	printf("string: %s\n", mystring);
+	printf("string:     %s\n", str);
 
-	printf("memory: ");
-	for (int x = 0; x < size; ++x)
-		printf("%c", *(destination + x));
-	printf("\n");
+	ret = strlcpy(here, str, size);
+	printf("strlcpy:    %s+%c\n", here, *(here+size));
+	printf("return:     %u\n", ret);
 
-	give = strlcpy(destination, mystring, size);
-
-	printf("string! %s\n", destination);
-	printf("strlcp: %u\n\n", give);
-
-	give2 = ft_strlcpy(destination2, mystring2, size);
-
-	printf("ftstrl: %s\n", destination2);
-	printf("ftstrl: %u\n", give2);
+	ret2 = ft_strlcpy(here2, str, size);
+	printf("ft_strlcpy: %s+%c\n", here2, *(here2+size));
+	printf("ftstrl:     %u\n", ret2);
 }
+*/

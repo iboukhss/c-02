@@ -6,7 +6,7 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:40:52 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 16:40:55 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:21:23 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ char	*ft_strcapitalize(char *str)
 
 int	main(void)
 {
-	char	testing[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	char	testing[] = "";
 	char	*res;
 
-	printf("%s\n", testing);
+	printf("1: %s\n", testing);
 	res = ft_strcapitalize(testing);
-	printf("%s\n", res);
+	printf("2: %s\n", res);
 }
 */
