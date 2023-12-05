@@ -6,15 +6,17 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:29:21 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/04 17:58:14 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/05 17:57:31 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
+	char			*tmp;
 
 	i = 0;
+	tmp = dest;
 	while (i < n)
 	{
 		*dest = *src;
@@ -22,24 +24,27 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		++dest;
 		++i;
 	}
+	return (tmp);
 }
 
+/*
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	char	*new = "this is a string";
-	char	destination[17];
-	int	i = 0;
+	char	*str = "this is a string";
+	char	here[17];
+	char	here2[17];
+	char	*ret;
+	char	*ret2;
 
-	printf("origin: %s\n", destination);
+	printf("string:     %s\n", str);
 
-	printf("memory: ");
-	for (i = 0; i < 17; ++i)
-		printf("%c", *(destination+i));
-	printf("\n");
+	ret = strncpy(here, str, 6);
+	printf("strncpy:    %s\nreturn:     %p\n", here, ret);
 
-	ft_strncpy(destination, new, 6);
-
-	printf("result: %s", destination);
+	ret2 = ft_strncpy(here2, str, 6);
+	printf("ft_strncpy: %s\nreturn:     %p\n", here2, ret2);
 }
+*/
