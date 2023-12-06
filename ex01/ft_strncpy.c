@@ -6,7 +6,7 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:29:21 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/05 17:57:31 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/06 19:34:54 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,16 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 	i = 0;
 	tmp = dest;
-	while (i < n)
+	while (i < n && *src)
 	{
 		*dest = *src;
+		++src;
+		++dest;
+		++i;
+	}
+	while (i < n)
+	{
+		*dest = '\0';
 		++src;
 		++dest;
 		++i;
@@ -33,18 +40,26 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 int	main(void)
 {
-	char	*str = "this is a string";
-	char	here[17];
-	char	here2[17];
+	char	*str = "hello world";
+	char	here[16];
+	char	here2[16];
 	char	*ret;
 	char	*ret2;
 
-	printf("string:     %s\n", str);
+	unsigned int	n = 10;
 
-	ret = strncpy(here, str, 6);
+	printf("string:     %s\n\n", str);
+
+	ret = strncpy(here, str, n);
 	printf("strncpy:    %s\nreturn:     %p\n", here, ret);
 
-	ret2 = ft_strncpy(here2, str, 6);
-	printf("ft_strncpy: %s\nreturn:     %p\n", here2, ret2);
+	for (int x = 0; x < 16; ++x)
+		printf("%d. %c\n", x, ret[x]);
+
+	ret2 = ft_strncpy(here2, str, n);
+	printf("\nft_strncpy: %s\nreturn:     %p\n", here2, ret2);
+
+	for (int x = 0; x < 16; ++x)
+		printf("%d. %c\n", x, ret2[x]);
 }
 */
