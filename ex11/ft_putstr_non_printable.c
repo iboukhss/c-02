@@ -6,7 +6,7 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:45:06 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/05 19:01:23 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/06 20:19:12 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_puthex(char n)
+void	ft_puthex(unsigned char n)
 {
 	char	*base16;
 	int		q;
@@ -48,7 +48,7 @@ void	ft_putstr_non_printable(char *str)
 
 int	main(void)
 {
-	char	*test = "Coucou\ntu\tvas bien\n?\v";
+	char	*test = "Hello, \x80World!";
 
 	ft_putstr_non_printable(test);
 	return (0);
